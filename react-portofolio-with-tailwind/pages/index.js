@@ -37,7 +37,7 @@ export default function Home() {
       <main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between dark:text-white">
-            <h1 className="font-burtons text-md"><a href=""><Image src={menu}/></a></h1>
+            <h1 className="font-burtons text-md"><a href=""><Image src={menu} alt="image"/></a></h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
@@ -79,7 +79,7 @@ export default function Home() {
               <a href="mailto:alexarjohns@gmail.com"><AiOutlineMail /></a>
             </div>
             <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
-              <Image src={deved} layout="fill" objectFit="cover" />
+              <Image src={deved} layout="fill" objectFit="cover" alt="image" />
             </div>
           </div>
         </section>
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
           <div className="lg:flex gap-10">
           <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:bg-gray-300 dark:hover:bg-gray-300 bg-white flex-1">
-              <Image src={code} width={100} height={100} />
+              <Image src={code} width={100} height={100} alt="image"/>
               <h3 className="text-red-600 text-lg font-medium pt-8 pb-2  ">
                 Skills
               </h3>
@@ -115,7 +115,7 @@ export default function Home() {
               <p className="text-black-800 py-1">PHP</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:bg-gray-300 dark:hover:bg-gray-300 bg-white flex-1">
-              <Image src={Tech} width={100} height={100} />
+              <Image src={Tech} width={100} height={100} alt="image"/>
               <h3 className="text-red-600 text-lg font-medium pt-8 pb-2 ">
                 Code your dream project
               </h3>
@@ -129,7 +129,7 @@ export default function Home() {
               <p className="text-black-800 py-1">Django + Flask</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 hover:bg-gray-300  dark:hover:bg-gray-300 bg-white flex-1 hover:bg-cyan-200">
-              <Image src={design} width={100} height={100} />
+              <Image src={design} width={100} height={100} alt="image"/>
               <h3 className="text-red-600 text-lg font-medium pt-8 pb-2  ">
                Projects
               </h3>
@@ -166,6 +166,7 @@ export default function Home() {
                 height={"100%"}
                 layout="responsive"
                 src={web1}
+                alt="image"
               />
             </div>
             <div className="basis-1/3 flex-1">
@@ -175,6 +176,7 @@ export default function Home() {
                 height={"100%"}
                 layout="responsive"
                 src={web2}
+                alt="image"
               />
             </div>
             <div className="basis-1/3 flex-1">
@@ -184,6 +186,7 @@ export default function Home() {
                 height={"100%"}
                 layout="responsive"
                 src={web3}
+                alt="image"
               />
             </div>
             <div className="basis-1/3 flex-1">
@@ -193,6 +196,7 @@ export default function Home() {
                 height={"100%"}
                 layout="responsive"
                 src={web4}
+                alt="image"
               />
             </div>
             <div className="basis-1/3 flex-1">
@@ -202,6 +206,7 @@ export default function Home() {
                 height={"100%"}
                 layout="responsive"
                 src={web5}
+                alt="image"
               />
             </div>
             <div className="basis-1/3 flex-1">
@@ -211,6 +216,7 @@ export default function Home() {
                 height={"100%"}
                 layout="responsive"
                 src={web6}
+                alt="image"
               />
             </div>
           </div>
