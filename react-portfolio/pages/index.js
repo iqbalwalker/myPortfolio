@@ -55,7 +55,11 @@ export default function Home() {
               </li>
             </ul>
           </nav>
+          <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full ring ring-gray-500 ring-opacity-30 w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96 dark:ring ring-teal-500 ring-opacity-30">
+              <Image src={deved} layout="fill" objectFit="cover" alt="image" />
+            </div>
           <div className="text-center p-10 py-10">
+            
           <h2 className="text-5xl py-2 text-black-600 font-medium dark:text-white md:text-6xl">
               Hi there,
             </h2>
@@ -75,11 +79,8 @@ export default function Home() {
               
               <a href="https://www.linkedin.com/in/alexa-john-212a1a1a3/" ><AiFillLinkedin /></a>
               <a href="https://github.com/iqbalwalker"><AiFillGithub /></a>
-              <a href=""><AiFillTwitterCircle /></a>
+              
               <a href="mailto:alexarjohns@gmail.com"><AiOutlineMail /></a>
-            </div>
-            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
-              <Image src={deved} layout="fill" objectFit="cover" alt="image" />
             </div>
           </div>
         </section>
