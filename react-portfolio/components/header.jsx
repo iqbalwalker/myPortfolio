@@ -1,0 +1,1 @@
+// https://api.opencagedata.com/geocode/v1/json?q=LAT+LNG&key=bae0a696bcc344d28f3eb4933820da14 
