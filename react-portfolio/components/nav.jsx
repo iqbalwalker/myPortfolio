@@ -62,7 +62,7 @@ export const Navbar = ({darkMode, setDarkMode, showCountries, setShowCountries})
                 className=" cursor-pointer text-2xl text-gray-800 hover:text-cyan-800 transition ease-in-out delay-150 hover:-translate-y-1 duration-300"
               />}
               </li>
-              <li className="transition ease-in-out delay-150 hover:-translate-y-1 duration-300">
+            <li className="transition ease-in-out delay-150 hover:-translate-y-1 duration-300">
                 <a
                   className="bg-gradient-to-r from-blue-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8 
                     hover:text-red-400  hover:dark:bg-gradient-to-r from-blue-500 "
@@ -70,8 +70,8 @@ export const Navbar = ({darkMode, setDarkMode, showCountries, setShowCountries})
                 >
                   Resume
                 </a>
-              </li>
-              <li className="transition ease-in-out delay-150 hover:-translate-y-1 duration-300">
+                </li>
+               {/*<li className="transition ease-in-out delay-150 hover:-translate-y-1 duration-300">
                 <button
                   className="bg-gradient-to-r from-blue-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8 
                     hover:text-red-400  hover:dark:bg-gradient-to-r from-blue-500 "
@@ -79,7 +79,7 @@ export const Navbar = ({darkMode, setDarkMode, showCountries, setShowCountries})
                 >
                   Location
                 </button>
-              </li>
+              </li>*/}
             </ul>
           </nav>
           </div>
