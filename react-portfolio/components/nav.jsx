@@ -12,8 +12,31 @@ import {
   } from "react-icons/ai";
 import { BsFillMoonStarsFill, BsFillSunFill, BsLinkedin, BsWifiOff } from "react-icons/bs";
 import menu from "../public/menu.png";
-import menu3 from "../public/menu3.png"; 
+import menu3 from "../public/menu3.png";
 
+const daysOfWeek = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
 
   
 
@@ -22,20 +45,20 @@ export const Navbar = ({darkMode, setDarkMode, showCountries, setShowCountries})
     const [online, setOnline] = useState(true);
 
     useEffect(() => {
-        const handleOnlineStatus = () => {
-          setOnline(navigator.onLine);
+      const handleOnlineStatus = () => {
+        setOnline(navigator.onLine);
+      };
+  
+      if (typeof window !== 'undefined') {
+        window.addEventListener('online', handleOnlineStatus);
+        window.addEventListener('offline', handleOnlineStatus);
+  
+        return () => {
+          window.removeEventListener('online', handleOnlineStatus);
+          window.removeEventListener('offline', handleOnlineStatus);
         };
-    
-        if (typeof window !== 'undefined') {
-          window.addEventListener('online', handleOnlineStatus);
-          window.addEventListener('offline', handleOnlineStatus);
-    
-          return () => {
-            window.removeEventListener('online', handleOnlineStatus);
-            window.removeEventListener('offline', handleOnlineStatus);
-          };
-        }
-      }, []);
+      }
+    }, []);
 
    
     return ( 
@@ -55,7 +78,7 @@ export const Navbar = ({darkMode, setDarkMode, showCountries, setShowCountries})
                 {darkMode ? <BsFillSunFill
                   
                   onClick={() => setDarkMode(!darkMode)}
-                  className=" cursor-pointer text-3xl dark:text-white dark:hover:text-yellow-300 transition ease-in-out delay-150 hover:-translate-y-1 duration-300"
+                  className=" cursor-pointer text-3xl dark:text-yellow-300 dark:hover:text-yellow-600 transition ease-in-out delay-150 hover:-translate-y-1 duration-300"
                 /> : <BsFillMoonStarsFill
                   
                 onClick={() => setDarkMode(!darkMode)}
@@ -83,4 +106,32 @@ export const Navbar = ({darkMode, setDarkMode, showCountries, setShowCountries})
           </nav>
           </div>
      );
+};
+
+
+
+export const Time = ({count, setCount, time, setTime}) => {
+ const currentTime =time.toLocaleTimeString('en-US',{
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+
+  const secs = time.getSeconds();
+  useEffect(() => {
+      setTime(new Date());
+  }, [time]);
+  const year = time.getFullYear();
+  const month = time.getMonth();
+  const date = time.getDate();
+  const day = time.getDay();
+  const currentDay = daysOfWeek[day];
+  const currentMonth = months[month];
+
+  return ( 
+    <>
+     {typeof window !== 'undefined'}
+    <span className="text-blue-800 dark:text-green-300">{currentTime}&#160;</span>
+    <span className="text-black dark:text-yellow-600">{currentDay} {date}, {currentMonth} {year}</span>
+    </>
+   );
 };

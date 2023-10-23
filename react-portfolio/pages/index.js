@@ -6,11 +6,12 @@ import {
   AiFillGithub,
   AiOutlineMail,
   AiOutlineWifi,
-  AiFillApi,
+  AiOutlineLoading3Quarters,
   AiOutlineLinkedin
 } from "react-icons/ai";
 import { BsFillMoonStarsFill, BsFillSunFill, BsLinkedin, BsWifiOff } from "react-icons/bs";
 import { FaSadTear, FaSadCry, FaLinkedin } from "react-icons/fa";
+import { BiLoaderCircle} from "react-icons/bi";
 import { useEffect, useState } from "react";
 import myPic from "../public/myPic.jpg";
 import code from "../public/code.png";
@@ -23,61 +24,27 @@ import web3 from "../public/web3.png";
 import web4 from "../public/web4.png";
 import web5 from "../public/web5.png";
 import web6 from "../public/web6.png";
-import {Navbar} from "../components/nav";
+import {Navbar, Time} from "../components/nav";
 
 
 
-const daysOfWeek = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December"
-];
+
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   /*const [online, setOnline] = useState(true); */
+  const [count, setCount]= useState(1);
   const [time, setTime] =useState(new Date());
-  const [count, setCount]= useState(0);
-  const currentTime =time.toLocaleTimeString();
-  const year = time.getFullYear();
-  const month = time.getMonth();
-  const date = time.getDate();
-  const day = time.getDay();
-  const currentDay = daysOfWeek[day];
-  const currentMonth = months[month];
-  
-
-
-  function myDelay(){
-    setCount(count + 1);
-  };
-
-  useEffect(() => {
-    setTime(new Date());
-  }, [time]);
-
-  
   const darkVal = "dark ";
   const lightVal = "";
   const [showCountries, setShowCountries] = useState(false);
+  const hours = time.getHours();
+  const minutes = time.getMinutes();
+  const seconds = time.getSeconds();
+
+  useEffect(()=>{
+    setCount(count + 1);
+  },[seconds]);
 
   return (
     <>
@@ -87,6 +54,16 @@ export default function Home() {
       </Head>
       <main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
         <section className="min-h-screen ">
+          <p className="text-center text-2xl ">
+          {count > 0 ? <Time time={time} setCount={setCount} count={count} setTime={setTime}/>
+            : 
+            <div className="flex justify-center text-black dark:text-yellow-300">
+              <BiLoaderCircle 
+              className=" animate-spin " 
+              />&#160;Loading...
+            </div>}
+          </p>
+          
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} showCountries={showCountries} setShowCountries={setShowCountries} />
           <>
           <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full ring ring-gray-500 ring-opacity-30 w-80 h-80 
@@ -105,7 +82,7 @@ export default function Home() {
               a Software Engineer
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl transition ease-in-out hover:-translate-y-1">
-              And I provide freelancing services on Software Engineering especially Front-End. Come join me in creating amazing software applications!
+              And I provide freelancing services on Software Engineering especially Frontend. Come join me in creating amazing software applications!
             </p>
             <p className="text-md py-5 leading-8 text-blue-800 dark:text-yellow-600 max-w-xl mx-auto md:text-xl transition ease-in-out hover:-translate-y-1">Your can reach out to me through:</p>
             <p className="text-2xl py-1 dark:text-gray-400 transition ease-in-out hover:-translate-y-1">Phone: <a className="text-xl py-1 dark:text-gray-400" href="tel:+254 758 345090">+254 758 345090</a></p>
@@ -116,7 +93,7 @@ export default function Home() {
                 <BsLinkedin
                   className="rounded-lg transition ease-in-out hover:-translate-y-1 hover:animate-bounce
                             hover:scale-110 bg-white rounded-lg shadow-xl shadow-blue-900
-                            text-blue-900 duration-300 rounded-lg bg-white text-gray-700 "
+                            text-blue-900 duration-300 rounded-lg bg-white "
                 />
               </a>
               <a href="https://github.com/iqbalwalker">
@@ -147,7 +124,7 @@ export default function Home() {
               developer, I&#39;ve done remote work for
               <span className="text-yellow-600"> agencies </span>
               consulted for <span className="text-yellow-600">startups </span>
-              and collaborated with talanted people to create digital products
+              and collaborated with talented people to create digital products
               for both business and consumer use.
             </p>
             <p className="text-md py-2 leading-8 text-gray-800 text-center dark:text-gray-200 transition ease-in-out hover:-translate-y-1">
@@ -190,7 +167,7 @@ export default function Home() {
                Projects
               </h3>
               <p className="dark:text-white py-4 transition ease-in-out hover:-translate-y-1">
-                I developed a couple of project samples &#40;Front-End&#41; for you to check out.
+                I developed a couple of project samples &#40;Frontend&#41; for you to check out.
               </p>
               <h4 className="bg-white py-4 text-purple-600 rounded-full shadow-xl shadow-purple-700 transition ease-in duration-400 hover:-translate-y-3">Project links:</h4>
               <p className="dark:text-white pt-4 transition ease-in-out hover:-translate-x-2 hover:text-blue-600 dark:hover:text-blue-600 "><a href="https://yummyfoodske.netlify.app/" target="_blank " rel="noreferrer" >
@@ -212,7 +189,7 @@ export default function Home() {
               developer, I&#39;ve done remote work for<br></br>
               <span className="text-teal-500 text-lg dark:text-yellow-600"> agencies </span>
               consulted for <span className="text-teal-500 dark:text-yellow-600">startups </span>
-              and collaborated with talanted people <br></br> to create digital products
+              and collaborated with talented people <br></br> to create digital products
               for both business and consumer use.
             </p>
             <p className="text-lg py-2 leading-8 text-gray-800 text-center dark:text-gray-200 transition ease-in-out hover:-translate-y-1">
