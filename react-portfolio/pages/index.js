@@ -24,7 +24,6 @@ import web4 from "../public/web4.png";
 import web5 from "../public/web5.png";
 import web6 from "../public/web6.png";
 import {Navbar} from "../components/nav";
-import Countries from "../components/countryData";
 
 
 
@@ -69,9 +68,7 @@ export default function Home() {
 
   function myDelay(){
     setCount(count + 1);
-  }
-  
-  useEffect(myDelay,[time.getSeconds()]);
+  };
 
   useEffect(() => {
     setTime(new Date());
@@ -118,25 +115,23 @@ export default function Home() {
               <a href="https://www.linkedin.com/in/alexa-john-212a1a1a3/" >
                 <BsLinkedin
                   className="rounded-lg transition ease-in-out hover:-translate-y-1 hover:animate-bounce
-                            hover:scale-110 hover:bg-white hover:rounded-lg hover:shadow-lg hover:shadow-blue-900/80
-                            hover:text-blue-900 duration-300 dark:rounded-lg dark:bg-white dark:text-gray-700
-                            dark:shadow-lg dark:hover:shadow-blue-900/80  dark:hover:text-blue-900"
+                            hover:scale-110 hover:bg-white hover:rounded-lg hover:shadow-xl hover:shadow-blue-900
+                            hover:text-blue-900 duration-300 rounded-lg bg-white text-gray-700 "
                 />
               </a>
               <a href="https://github.com/iqbalwalker">
                 <AiFillGithub 
                   className="rounded-lg shadow-white transition ease-in-out text-white 
-                  bg-gray-700 hover:-translate-y-1 shadow-lg hover:animate-bounce
-                  hover:scale-110 hover:bg-black hover:rounded-lg hover:shadow-lg hover:shadow-black/50
-                  hover:text-white duration-300 dark:text-white dark:bg-gray-700 dark:rounded-lg 
-                  dark:shadow-lg dark:hover:shadow-black dark:hover:text-white dark:hover:bg-black"
+                  bg-gray-700 hover:-translate-y-1 hover:animate-bounce
+                  hover:scale-110 hover:bg-black hover:rounded-lg hover:shadow-xl hover:shadow-black
+                  hover:text-white duration-300 "
                 />
               </a>
               
               <a href="mailto:alexarjohns@gmail.com">
                 <AiOutlineMail
                   className="rounded-xl transition ease-in-out text-white hover:animate-bounce bg-gray-700 hover:-translate-y-1 
-                  hover:scale-110 hover:bg-white hover:rounded-xl hover:shadow-xl hover:shadow-red-600/80
+                  hover:scale-110 hover:bg-white hover:rounded-xl hover:shadow-xl hover:shadow-red-600
                   hover:text-red-600 duration-300"
                 />
               </a>
@@ -198,10 +193,14 @@ export default function Home() {
                 I developed a couple of project samples &#40;Front-End&#41; for you to check out.
               </p>
               <h4 className="bg-white py-4 text-purple-600 rounded-full shadow-xl shadow-purple-700 transition ease-in duration-400 hover:-translate-y-3">Project links:</h4>
-              <p className="dark:text-white pt-4 transition ease-in-out hover:-translate-x-2 hover:text-blue-600 dark:hover:text-blue-600 "><a href="https://yummyfoodske.netlify.app/" target="_blank" >Restuarant Website</a></p>
-              <p className="dark:text-white pt-4 transition ease-in-out hover:-translate-x-2 hover:text-blue-600 dark:hover:text-blue-600 "><a href="https://foodhub-ke.netlify.app/" target="_blank" >Food Hub</a></p>
-              <p className="dark:text-white pt-4 transition ease-in-out hover:-translate-x-2 hover:text-blue-600 dark:hover:text-blue-600 "><a href="https://healthyfoods-ke.netlify.app/" target="_blank" >Healthy Food</a></p>
-              <p className="dark:text-white pt-4 transition ease-in-out hover:-translate-x-2 hover:text-blue-600 dark:hover:text-blue-600 "><a href="https://bakery-ke.netlify.app/" target="_blank" >Bakery</a></p>
+              <p className="dark:text-white pt-4 transition ease-in-out hover:-translate-x-2 hover:text-blue-600 dark:hover:text-blue-600 "><a href="https://yummyfoodske.netlify.app/" target="_blank " rel="noreferrer" >
+                Restuarant Website</a></p>
+              <p className="dark:text-white pt-4 transition ease-in-out hover:-translate-x-2 hover:text-blue-600 dark:hover:text-blue-600 "><a href="https://foodhub-ke.netlify.app/" target="_blank" rel="noreferrer" >
+                Food Hub</a></p>
+              <p className="dark:text-white pt-4 transition ease-in-out hover:-translate-x-2 hover:text-blue-600 dark:hover:text-blue-600 "><a href="https://healthyfoods-ke.netlify.app/" target="_blank" rel="noreferrer" >
+                Healthy Food</a></p>
+              <p className="dark:text-white pt-4 transition ease-in-out hover:-translate-x-2 hover:text-blue-600 dark:hover:text-blue-600 "><a href="https://bakery-ke.netlify.app/" target="_blank" rel="noreferrer" >
+                Bakery</a></p>
             </div>
           </div>
         </section>
