@@ -31,7 +31,7 @@ import {Navbar, Time} from "../components/nav";
 
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   /*const [online, setOnline] = useState(true); */
   const [count, setCount]= useState(1);
   const [time, setTime] =useState(new Date());
