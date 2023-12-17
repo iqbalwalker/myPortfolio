@@ -89,7 +89,7 @@ export const Navbar = ({darkMode, setDarkMode, showCountries, setShowCountries})
                 <a
                   className="bg-gradient-to-r from-blue-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8 
                     hover:text-red-400  hover:dark:bg-gradient-to-r from-blue-500 "
-                  href="myCV.pdf" target="_blank" download>
+                  href="Alexa(CV).pdf" target="_blank" download>
                   Resume
                 </a>
                 </li>
