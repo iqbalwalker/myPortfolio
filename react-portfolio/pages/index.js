@@ -185,12 +185,15 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 text-center dark:text-white transition ease-in-out hover:-translate-y-1">Portfolio</h3>
             <p className="text-lg py-2 leading-8 text-gray-800 text-center dark:text-gray-200 transition ease-in-out hover:-translate-y-1">
-              Since the beginning of my journey as a freelance designer and
-              developer, I&#39;ve done remote work for<br></br>
-              <span className="text-teal-500 text-lg dark:text-yellow-600"> agencies </span>
-              consulted for <span className="text-teal-500 dark:text-yellow-600">startups </span>
-              and collaborated with talented people <br></br> to create digital products
-              for both business and consumer use.
+              I have pursued a <span className="text-teal-500 text-lg dark:text-yellow-600">Bachelor of Technology in Computer and Electronics Systems </span> 
+              <br></br>from <span className="text-teal-500 text-lg dark:text-yellow-600"> Mount Kenya University </span>
+              <br></br>I have also undergone
+              <span className="text-teal-500 text-lg dark:text-yellow-600"> React Training</span> under a bootcamp
+              <br></br>from <span className="text-teal-500 text-lg dark:text-yellow-600">
+                Meta-Andela collaboration</span> and <span className="text-teal-500 text-lg dark:text-yellow-600">Google Cloud Computing 
+                </span>
+              <br></br> as well as containerization tools using
+              <span className="text-teal-500 text-lg dark:text-yellow-600"> Docker</span>
             </p>
             <p className="text-lg py-2 leading-8 text-gray-800 text-center dark:text-gray-200 transition ease-in-out hover:-translate-y-1">
               I offer the following services: <br></br>Web App development <br></br>API development 
