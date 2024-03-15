@@ -91,7 +91,7 @@ export default function Home() {
               
               <a href="https://www.linkedin.com/in/alexa-john-212a1a1a3/" >
                 <BsLinkedin
-                  className="rounded-lg transition ease-in-out hover:-translate-y-1 hover:animate-bounce
+                  className="rounded-lg transition ease-in-out hover:-translate-y-1
                             hover:scale-110 bg-white rounded-lg shadow-xl hover:shadow-blue-700
                            text-gray-500 hover:text-blue-900 duration-300 rounded-lg bg-white "
                 />
@@ -99,7 +99,7 @@ export default function Home() {
               <a href="https://github.com/iqbalwalker">
                 <AiFillGithub 
                   className=" transition ease-in-out 
-                  bg-gray-500 hover:-translate-y-1 hover:animate-bounce text-gray-500
+                  bg-gray-500 hover:-translate-y-1 text-gray-500
                   hover:scale-110 hover:bg-black rounded-lg shadow-xl hover:shadow-black
                   text-white duration-300 "
                 />
@@ -107,7 +107,7 @@ export default function Home() {
               
               <a href="mailto:alexarjohns@gmail.com">
                 <AiOutlineMail
-                  className="rounded-xl transition ease-in-out text-white hover:animate-bounce hover:-translate-y-1 
+                  className="rounded-xl transition ease-in-out text-white hover:-translate-y-1 
                   hover:scale-110  bg-gray-500 hover:bg-white rounded-xl shadow-xl hover:shadow-red-600 text-white
                   hover:text-red-600 duration-300"
                 />
