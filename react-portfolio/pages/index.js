@@ -92,14 +92,14 @@ export default function Home() {
               <a href="https://www.linkedin.com/in/alexa-john-212a1a1a3/" >
                 <BsLinkedin
                   className="rounded-lg transition ease-in-out hover:-translate-y-1 hover:animate-bounce
-                            hover:scale-110 bg-white rounded-lg shadow-xl hover:shadow-blue-900
-                            text-blue-900 duration-300 rounded-lg bg-white "
+                            hover:scale-110 bg-white rounded-lg shadow-xl hover:shadow-blue-900 text-gray-400
+                            hover:text-blue-900 duration-300 rounded-lg bg-white "
                 />
               </a>
               <a href="https://github.com/iqbalwalker">
                 <AiFillGithub 
                   className="rounded-lg shadow-white transition ease-in-out text-white 
-                  bg-gray-700 hover:-translate-y-1 hover:animate-bounce
+                  bg-gray-700 hover:-translate-y-1 hover:animate-bounce text-gray-400
                   hover:scale-110 bg-black rounded-lg shadow-xl hover:shadow-black
                   text-white duration-300 "
                 />
@@ -108,7 +108,7 @@ export default function Home() {
               <a href="mailto:alexarjohns@gmail.com">
                 <AiOutlineMail
                   className="rounded-xl transition ease-in-out text-white hover:animate-bounce hover:-translate-y-1 
-                  hover:scale-110 bg-white rounded-xl shadow-xl hover:shadow-red-600
+                  hover:scale-110 bg-white rounded-xl shadow-xl hover:shadow-red-600 text-gray-400
                   text-red-600 duration-300"
                 />
               </a>
