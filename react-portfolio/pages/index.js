@@ -98,7 +98,7 @@ export default function Home() {
               </a>
               <a href="https://github.com/iqbalwalker">
                 <AiFillGithub 
-                  className="rounded-lg shadow-white transition ease-in-out text-white 
+                  className="rounded-lg shadow-white transition ease-in-out 
                   bg-gray-500 hover:-translate-y-1 hover:animate-bounce text-gray-500
                   hover:scale-110 hover:bg-black rounded-lg shadow-xl hover:shadow-black
                   text-white duration-300 "
